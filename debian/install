@@ -1,0 +1,3 @@
+src/pswpci.sh /usr/sbin/
+src/pswpci.service /lib/systemd/system/
+src/rk3588-nvme-gen2.dts /boot/overlay-user/

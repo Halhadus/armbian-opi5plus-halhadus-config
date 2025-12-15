@@ -1,0 +1,11 @@
+[Unit]
+Description=NVMe Power Save and PCIe ASPM Configuration
+After=local-fs.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/pswpci.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

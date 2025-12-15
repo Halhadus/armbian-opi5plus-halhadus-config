@@ -1,0 +1,36 @@
+#!/bin/bash
+set -e
+
+if [ "$1" = "configure" ]; then
+    chmod +x /usr/local/bin/pswpci.sh
+    echo "Compiling Device Tree Overlay..."
+    if [ -f /boot/overlay-user/rk3588-nvme-gen2.dts ]; then
+        dtc -O dtb -o /boot/overlay-user/rk3588-nvme-gen2.dtbo /boot/overlay-user/rk3588-nvme-gen2.dts
+        echo "Overlay compiled successfully."
+    else
+        echo "Warning: .dts file not found in /boot/overlay-user/"
+    fi
+    ENV_FILE="/boot/armbianEnv.txt"
+    if [ -f "$ENV_FILE" ]; then
+        if grep -q "^extraargs=" "$ENV_FILE"; then
+            if grep -q "^extraargs=.*cma=" "$ENV_FILE"; then
+                sed -i '/^extraargs=/ s/cma=[^ ]*/cma=1G/' "$ENV_FILE"
+            else
+                sed -i '/^extraargs=/ s/$/ cma=1G/' "$ENV_FILE"
+            fi
+        else
+            echo "extraargs=cma=1G" >> "$ENV_FILE"
+        fi
+        echo "Armbian environment updated (CMA set to 1G)."
+    fi
+    if grep -q "user_overlays=" "$ENV_FILE"; then
+        if ! grep -q "rk3588-nvme-gen2" "$ENV_FILE"; then
+            sed -i '/^user_overlays=/ s/$/ rk3588-nvme-gen2/' "$ENV_FILE"
+        fi
+    else
+        echo "user_overlays=rk3588-nvme-gen2" >> "$ENV_FILE"
+    fi
+    echo "Armbian environment updated(Gen3x4 to Gen2x4)."
+fi
+
+#DEBHELPER#
