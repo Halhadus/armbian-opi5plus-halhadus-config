@@ -2,7 +2,7 @@
 set -e
 
 if [ "$1" = "configure" ]; then
-    chmod +x /usr/local/bin/pswpci.sh
+    chmod +x /usr/sbin/pswpci.sh
     echo "Compiling Device Tree Overlay..."
     if [ -f /boot/overlay-user/rk3588-nvme-gen2.dts ]; then
         dtc -O dtb -o /boot/overlay-user/rk3588-nvme-gen2.dtbo /boot/overlay-user/rk3588-nvme-gen2.dts
