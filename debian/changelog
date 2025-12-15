@@ -1,7 +1,8 @@
-armbian-opi5plus-halhadus-config (1.0) trixie; urgency=medium
+armbian-opi5plus-halhadus-config (1.0.1) trixie; urgency=medium
 
   * Initial native release for OPi5p environment.
   * Added NVMe scripts and services.
   * Added dependency tree.
+  * Removed NVMe Gen2 dtbo
 
- -- Halhadus <eneshakans45@proton.me>  Mon, 15 Dec 2025 14:50:29 +0300
+ -- Halhadus <eneshakans45@proton.me>  Mon, 16 Dec 2025 01:58:29 +0300

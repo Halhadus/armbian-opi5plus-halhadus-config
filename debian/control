@@ -8,7 +8,6 @@ Standards-Version: 4.6.2
 Package: armbian-opi5plus-halhadus-config
 Architecture: arm64
 Depends: ${misc:Depends}, 
-    device-tree-compiler,
     zstd, xz-utils, 
     clinfo, vulkan-tools, glmark2-es2-drm, vkmark, glmark2-es2-wayland,
     lm-sensors, fastfetch, git, smartmontools, usbutils, pciutils,
