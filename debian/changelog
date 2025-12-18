@@ -4,5 +4,6 @@ armbian-opi5plus-halhadus-config (1.0.1) trixie; urgency=medium
   * Added NVMe scripts and services.
   * Added dependency tree.
   * Removed NVMe Gen2 dtbo
+  * Changed something
 
- -- Halhadus <eneshakans45@proton.me>  Mon, 16 Dec 2025 01:58:29 +0300
+ -- Halhadus <eneshakans45@proton.me>  Mon, 18 Dec 2025 16:39:29 +0300

@@ -9,7 +9,7 @@ Package: armbian-opi5plus-halhadus-config
 Architecture: arm64
 Depends: ${misc:Depends}, 
     zstd, xz-utils, 
-    clinfo, vulkan-tools, glmark2-es2-drm, vkmark, glmark2-es2-wayland,
+    clinfo, vulkan-tools, mesa-vulkan-drivers, glmark2-es2-drm, vkmark, glmark2-es2-wayland,
     lm-sensors, fastfetch, git, smartmontools, usbutils, pciutils,
     binutils, build-essential, meson, libtool, pkgconf, cmake, autoconf, automake,
     file,
@@ -18,6 +18,5 @@ Depends: ${misc:Depends},
     libv4l-0t64, libv4l-dev, libv4l-rkmpp,
     rockchip-multimedia-config,
     v4l-utils, qv4l2, qvidcap, ir-keytable, dvb-tools, libdvbv5-0t64, libdvbv5-dev,
-    gstreamer1.0-rockchip1,
-    libmali-valhall-g610-g24p0-x11-wayland-gbm
+    gstreamer1.0-rockchip1
 Description: Orange Pi 5 Plus Halhadus Configuration Package
