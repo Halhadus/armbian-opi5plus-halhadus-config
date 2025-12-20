@@ -1,4 +1,4 @@
-armbian-opi5plus-halhadus-config (1.0.3) trixie; urgency=medium
+armbian-opi5plus-halhadus-config (1.0.4) trixie; urgency=medium
 
   * Initial native release for OPi5p environment.
   * Added NVMe scripts and services.
@@ -8,5 +8,6 @@ armbian-opi5plus-halhadus-config (1.0.3) trixie; urgency=medium
   * Panthor
   * Docker optimisations
   * Mesa Backports (PanVK Vulkan 1.4)
+  * Removed gstreamer-rockchip
 
- -- Halhadus <eneshakans45@proton.me>  Mon, 18 Dec 2025 16:39:29 +0300
+ -- Halhadus <eneshakans45@proton.me>  Mon, 20 Dec 2025 16:41:29 +0300
