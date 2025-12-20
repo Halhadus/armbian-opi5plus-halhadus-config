@@ -16,10 +16,10 @@ if [ "$1" = "configure" ]; then
             echo "extraargs=cma=1G" >> "$ENV_FILE"
         fi
         if ! grep -q "^overlays=" "$ENV_FILE"; then
-            echo "overlays=rockchip-rk3588-panthor-gpu" >> "$ENV_FILE"
+            echo "overlays=panthor-gpu" >> "$ENV_FILE"
         else
-            if ! grep -q "rockchip-rk3588-panthor-gpu" <<< "$(grep "^overlays=" "$ENV_FILE")"; then
-                sed -i '/^overlays=/ s/$/ rockchip-rk3588-panthor-gpu/' "$ENV_FILE"
+            if ! grep -q "panthor-gpu" <<< "$(grep "^overlays=" "$ENV_FILE")"; then
+                sed -i '/^overlays=/ s/$/ panthor-gpu/' "$ENV_FILE"
             fi
         fi
         if ! grep -q "^earlycon=" "$ENV_FILE"; then
