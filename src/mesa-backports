@@ -1,0 +1,27 @@
+Package: mesa-*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libgl*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libegl*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libgbm*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libdrm*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libosmesa*
+Pin: release n=trixie-backports
+Pin-Priority: 990
+
+Package: libd3dadapter9-mesa*
+Pin: release n=trixie-backports
+Pin-Priority: 990

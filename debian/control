@@ -18,5 +18,5 @@ Depends: ${misc:Depends},
     libv4l-0t64, libv4l-dev, libv4l-rkmpp,
     rockchip-multimedia-config,
     v4l-utils, qv4l2, qvidcap, ir-keytable, dvb-tools, libdvbv5-0t64, libdvbv5-dev,
-    gstreamer1.0-rockchip1
+    gstreamer1.0-rockchip1 ffmpeg
 Description: Orange Pi 5 Plus Halhadus Configuration Package
