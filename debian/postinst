@@ -22,6 +22,12 @@ if [ "$1" = "configure" ]; then
                 sed -i '/^overlays=/ s/$/ rockchip-rk3588-panthor-gpu/' "$ENV_FILE"
             fi
         fi
+        if ! grep -q "^earlycon=" "$ENV_FILE"; then
+            echo "earlycon=on" >> "$ENV_FILE"
+        fi
+        if ! grep -q "^docker_optimizations=" "$ENV_FILE"; then
+            echo "docker_optimizations=on" >> "$ENV_FILE"
+        fi
         echo "Armbian environment updated (CMA set and Panthor GPU overlay added)."
     fi
 fi
