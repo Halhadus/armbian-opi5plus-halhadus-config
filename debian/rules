@@ -5,4 +5,4 @@
 
 override_dh_installsystemd:
 	dh_installsystemd --no-start pswpci.service
-        dh_installsystemd --no-start onboard-mic.service
+	dh_installsystemd --no-start onboard-mic.service
