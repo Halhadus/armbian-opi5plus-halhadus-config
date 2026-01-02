@@ -4,6 +4,7 @@ set -e
 if [ "$1" = "configure" ]; then
     systemctl enable getty@tty1.service || true
     chmod +x /usr/sbin/pswpci.sh
+    chmod +x /usr/sbin/onboard-mic.sh
     echo "Compiling Device Tree Overlay..."
     if [ -f /boot/overlay-user/rk3588-opi5plus-fan-custom.dts ]; then
         dtc -O dtb -o /boot/overlay-user/rk3588-opi5plus-fan-custom.dtbo /boot/overlay-user/rk3588-opi5plus-fan-custom.dts

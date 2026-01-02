@@ -1,0 +1,11 @@
+[Unit]
+Description=Orange Pi 5 Plus Onboard Mic Fixer
+After=sound.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/sbin/onboard-mic.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
