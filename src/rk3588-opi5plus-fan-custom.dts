@@ -8,8 +8,6 @@
         target = <&pwm3>;
         __overlay__ {
             status = "okay";
-            /delete-property/ pinctrl-names;
-            /delete-property/ pinctrl-0;
             pinctrl-names = "active";
             pinctrl-0 = <&pwm3m1_pins>;
         };
@@ -18,90 +16,18 @@
     fragment@1 {
         target = <&fan>;
         __overlay__ {
-            /delete-property/ rockchip,temp-trips;
             status = "okay";
             pwms = <&pwm3 0 40000 0>;
-            cooling-levels = <0 75 95 125 160 195 225 255>;
-        };
-    };
-
-    fragment@2 {
-        target = <&soc_thermal>;
-        __overlay__ {
-            polling-delay = <1000>;
-            polling-delay-passive = <1000>;
-
-            /delete-node/ trips;
-            /delete-node/ cooling-maps;
-
-            trips {
-                fan_soft_1: fan_soft_1 {
-                    temperature = <47000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_2: fan_soft_2 {
-                    temperature = <53000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_3: fan_soft_3 {
-                    temperature = <58000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_4: fan_soft_4 {
-                    temperature = <63000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_5: fan_soft_5 {
-                    temperature = <67000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_6: fan_soft_6 {
-                    temperature = <71000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-                fan_soft_max: fan_soft_max {
-                    temperature = <75000>;
-                    hysteresis = <2000>;
-                    type = "active";
-                };
-            };
-
-            cooling-maps {
-                map_soft_1 {
-                    trip = <&fan_soft_1>;
-                    cooling-device = <&fan 1 1>; 
-                };
-                map_soft_2 {
-                    trip = <&fan_soft_2>;
-                    cooling-device = <&fan 2 2>;
-                };
-                map_soft_3 {
-                    trip = <&fan_soft_3>;
-                    cooling-device = <&fan 3 3>;
-                };
-                map_soft_4 {
-                    trip = <&fan_soft_4>;
-                    cooling-device = <&fan 4 4>;
-                };
-                map_soft_5 {
-                    trip = <&fan_soft_5>;
-                    cooling-device = <&fan 5 5>;
-                };
-                map_soft_6 {
-                    trip = <&fan_soft_6>;
-                    cooling-device = <&fan 6 6>;
-                };
-                map_soft_max {
-                    trip = <&fan_soft_max>;
-                    cooling-device = <&fan 7 7>; 
-                };
-            };
+            cooling-levels = <0 70 95 125 165 195 225 255>;
+            rockchip,temp-trips = <
+                54000 1
+                56000 2
+                59000 3
+                63000 4
+                67000 5
+                71000 6
+                75000 7
+            >;
         };
     };
 };
