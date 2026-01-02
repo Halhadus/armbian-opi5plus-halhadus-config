@@ -21,7 +21,7 @@
             /delete-property/ rockchip,temp-trips;
             status = "okay";
             pwms = <&pwm3 0 40000 0>;
-            cooling-levels = <0 70 90 120 150 180 210 255>;
+            cooling-levels = <0 75 95 125 160 195 225 255>;
         };
     };
 
@@ -30,6 +30,9 @@
         __overlay__ {
             polling-delay = <1000>;
             polling-delay-passive = <1000>;
+
+            /delete-node/ trips;
+            /delete-node/ cooling-maps;
 
             trips {
                 fan_soft_1: fan_soft_1 {
@@ -43,22 +46,22 @@
                     type = "active";
                 };
                 fan_soft_3: fan_soft_3 {
-                    temperature = <56000>;
+                    temperature = <58000>;
                     hysteresis = <2000>;
                     type = "active";
                 };
                 fan_soft_4: fan_soft_4 {
-                    temperature = <60000>;
+                    temperature = <63000>;
                     hysteresis = <2000>;
                     type = "active";
                 };
                 fan_soft_5: fan_soft_5 {
-                    temperature = <65000>;
+                    temperature = <67000>;
                     hysteresis = <2000>;
                     type = "active";
                 };
                 fan_soft_6: fan_soft_6 {
-                    temperature = <70000>;
+                    temperature = <71000>;
                     hysteresis = <2000>;
                     type = "active";
                 };
