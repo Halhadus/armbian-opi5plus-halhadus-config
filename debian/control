@@ -41,5 +41,5 @@ Depends: ${misc:Depends},
     mangohud, goverlay, gamemode, box64-rk3588,
     arch-install-scripts, seatd, wl-clipboard, mesa-utils, evtest, armbian-plymouth-theme,
     bridge-utils, iptables-persistent, nvme-cli, xfce4-settings, xdg-utils, polkit-kde-agent-1,
-    dbus-x11, trace-cmd, libpolkit-agent-1-0
+    dbus-x11, trace-cmd, libpolkit-agent-1-0, aria2
 Description: Orange Pi 5 Plus Halhadus Configuration Package
