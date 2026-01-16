@@ -5,3 +5,4 @@ src/mesa-backports /etc/apt/preferences.d/
 src/rk3588-opi5plus-fan-custom.dts /boot/overlay-user/
 src/onboard-mic.sh /usr/sbin/
 src/onboard-mic.service /lib/systemd/system/
+src/blacklist-wifi.conf /etc/modprobe.d/

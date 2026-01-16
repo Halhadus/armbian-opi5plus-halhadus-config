@@ -1,4 +1,4 @@
-armbian-opi5plus-halhadus-config (1.0.8) trixie; urgency=medium
+armbian-opi5plus-halhadus-config (1.0.9) trixie; urgency=medium
 
   * Initial native release for OPi5p environment.
   * Added NVMe scripts and services.
@@ -13,5 +13,6 @@ armbian-opi5plus-halhadus-config (1.0.8) trixie; urgency=medium
   * Choose onboard mic
   * Fix
   * Added all packages
+  * Wi-Fi disabled for one antenna setup
 
- -- Halhadus <eneshakans45@proton.me>  Mon, 9 Dec 2026 16:55:29 +0300
+ -- Halhadus <eneshakans45@proton.me>  Mon, 16 Dec 2026 14:39:29 +0300
