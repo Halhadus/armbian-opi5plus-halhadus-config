@@ -1,0 +1,13 @@
+[Unit]
+Description=PWM Fan Control Service for RK3588 + Noctua A4x10 5V PWM
+After=multi-user.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/sbin/noctuafancontrol.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

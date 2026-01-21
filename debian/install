@@ -2,7 +2,8 @@ src/pswpci.sh /usr/sbin/
 src/pswpci.service /lib/systemd/system/
 src/override.conf /etc/systemd/system/getty@tty1.service.d/
 src/mesa-backports /etc/apt/preferences.d/
-src/rk3588-opi5plus-fan-custom.dts /boot/overlay-user/
 src/onboard-mic.sh /usr/sbin/
 src/onboard-mic.service /lib/systemd/system/
 src/blacklist-wifi.conf /etc/modprobe.d/
+src/noctuafancontrol.sh /usr/sbin/
+src/noctuafancontrol.service /lib/systemd/system/

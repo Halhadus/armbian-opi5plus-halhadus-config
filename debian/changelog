@@ -1,4 +1,4 @@
-armbian-opi5plus-halhadus-config (1.0.9) trixie; urgency=medium
+armbian-opi5plus-halhadus-config (1.1.0) trixie; urgency=medium
 
   * Initial native release for OPi5p environment.
   * Added NVMe scripts and services.
@@ -14,5 +14,6 @@ armbian-opi5plus-halhadus-config (1.0.9) trixie; urgency=medium
   * Fix
   * Added all packages
   * Wi-Fi disabled for one antenna setup
+  * Official fan to Noctua A4x10 5V PWM
 
- -- Halhadus <eneshakans45@proton.me>  Mon, 16 Dec 2026 14:39:29 +0300
+ -- Halhadus <eneshakans45@proton.me>  Mon, 21 Dec 2026 17:26:29 +0300
