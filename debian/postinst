@@ -5,6 +5,7 @@ if [ "$1" = "configure" ]; then
     systemctl enable getty@tty1.service || true
     chmod +x /usr/sbin/pswpci.sh
     chmod +x /usr/sbin/onboard-mic.sh
+    chmod +x /usr/sbin/noctuafancontrol.sh
     ENV_FILE="/boot/armbianEnv.txt"
     if [ -f "$ENV_FILE" ]; then
         if grep -q "^extraargs=" "$ENV_FILE"; then
